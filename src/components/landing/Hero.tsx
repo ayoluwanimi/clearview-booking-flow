@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Star, Shield, Award } from "lucide-react";
+import { ChevronDown, CheckCircle, Users, CreditCard } from "lucide-react";
 
 export function Hero() {
   const scrollToBooking = () => {
@@ -54,37 +54,29 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto container-padding relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center stagger-children">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
-            <span className="w-2 h-2 bg-highlight rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">
-              Professional Window Cleaning Services
-            </span>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
-            Let The Light
+            Complete Cleaning Solutions for Homes
             <span className="block mt-2">
-              <span className="text-highlight">Shine</span> In
+              & Businesses in <span className="text-highlight">United Kingdom</span>
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Professional window cleaning services that make your world sparkle. 
-            Crystal clear views, every single time.
+            Reliable cleaning and maintenance services for homes and businesses. 
+            Delivered by a trusted local team.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button
               variant="hero"
               size="xl"
               onClick={scrollToBooking}
               className="group"
             >
-              Book Now
+              Get a Free Quote
               <ChevronDown className="h-5 w-5 transition-transform group-hover:translate-y-1" />
             </Button>
             <Button
@@ -97,35 +89,29 @@ export function Hero() {
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
-            <div className="flex items-center gap-2 text-white/90">
-              <div className="p-2 rounded-lg bg-white/10">
-                <Star className="h-5 w-5 text-highlight fill-highlight" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="glass rounded-xl p-6 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-white/20 flex items-center justify-center">
+                <CheckCircle className="h-6 w-6 text-white" />
               </div>
-              <div className="text-left">
-                <div className="font-semibold text-sm">5-Star Rated</div>
-                <div className="text-xs text-white/60">500+ Reviews</div>
-              </div>
+              <h3 className="font-semibold text-white mb-1">100% Satisfaction Guarantee</h3>
+              <p className="text-white/70 text-sm">We guarantee 100% satisfaction if you are not happy we will make it right!</p>
             </div>
             
-            <div className="flex items-center gap-2 text-white/90">
-              <div className="p-2 rounded-lg bg-white/10">
-                <Shield className="h-5 w-5 text-accent" />
+            <div className="glass rounded-xl p-6 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-white/20 flex items-center justify-center">
+                <Users className="h-6 w-6 text-white" />
               </div>
-              <div className="text-left">
-                <div className="font-semibold text-sm">Fully Insured</div>
-                <div className="text-xs text-white/60">& Bonded</div>
-              </div>
+              <h3 className="font-semibold text-white mb-1">Fully-Vetted Cleaning Crew</h3>
+              <p className="text-white/70 text-sm">Our vetted background checked cleaners ensure quality and peace of mind</p>
             </div>
             
-            <div className="flex items-center gap-2 text-white/90">
-              <div className="p-2 rounded-lg bg-white/10">
-                <Award className="h-5 w-5 text-highlight" />
+            <div className="glass rounded-xl p-6 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-white/20 flex items-center justify-center">
+                <CreditCard className="h-6 w-6 text-white" />
               </div>
-              <div className="text-left">
-                <div className="font-semibold text-sm">10+ Years</div>
-                <div className="text-xs text-white/60">Experience</div>
-              </div>
+              <h3 className="font-semibold text-white mb-1">Upfront Pricing & Easy Booking</h3>
+              <p className="text-white/70 text-sm">Transparent pricing with no hidden fees and quick booking!</p>
             </div>
           </div>
         </div>
