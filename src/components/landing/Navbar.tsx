@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Droplets } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Reviews", href: "#reviews" },
+  { name: "Contact Us", href: "#contact" },
+  { name: "About Us", href: "#about" },
 ];
 
 export function Navbar() {
@@ -49,20 +48,11 @@ export function Navbar() {
             className="flex items-center gap-2 group"
             onClick={() => scrollToSection("#home")}
           >
-            <div className={cn(
-              "p-2 rounded-xl transition-all duration-300",
-              isScrolled ? "bg-primary" : "bg-white/20 backdrop-blur-sm"
-            )}>
-              <Droplets className={cn(
-                "h-6 w-6 transition-colors",
-                isScrolled ? "text-primary-foreground" : "text-white"
-              )} />
-            </div>
             <span className={cn(
               "font-heading font-bold text-xl transition-colors",
               isScrolled ? "text-primary" : "text-white"
             )}>
-              Crystal Clear
+              GEB Company
             </span>
           </Link>
 
@@ -88,22 +78,15 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button
-              variant={isScrolled ? "outline" : "heroOutline"}
-              size="sm"
-              onClick={() => scrollToSection("#booking")}
-            >
-              Get Quote
-            </Button>
             <Button
               variant={isScrolled ? "hero" : "hero"}
               size="sm"
               onClick={() => scrollToSection("#booking")}
               className={!isScrolled ? "animate-none" : ""}
             >
-              Book Now
+              Get a Free Quote
             </Button>
           </div>
 
@@ -147,7 +130,7 @@ export function Navbar() {
                   onClick={() => scrollToSection("#booking")}
                   className="w-full animate-none"
                 >
-                  Book Now
+                  Get a Free Quote
                 </Button>
               </div>
             </div>

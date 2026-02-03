@@ -1,142 +1,92 @@
-import { useState } from "react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    location: "Downtown Seattle",
-    rating: 5,
-    text: "Absolutely incredible service! My windows have never looked this clean. The team was professional, on time, and the results speak for themselves. Highly recommend Crystal Clear!",
-    image: "SM",
+    name: "Oluwatobi Gabriel",
+    rating: 5.0,
+    review: "Absolutely outstanding window cleaning service. The team was punctual, professional, and paid great attention to detail. Every window was left spotless, streak-free, and looking brand new. They worked efficiently without cutting corners and were very respectful of the property.",
+    avatar: "O",
   },
   {
-    name: "Michael Chen",
-    location: "Bellevue, WA",
-    rating: 5,
-    text: "I've tried several window cleaning services, but Crystal Clear is by far the best. They got rid of hard water stains that other companies couldn't touch. Worth every penny!",
-    image: "MC",
+    name: "Oluwatobi Gabriel",
+    rating: 4.0,
+    review: "Absolutely outstanding window cleaning service. The team was punctual, professional, and paid great attention to detail. Every window was left spotless, streak-free, and looking brand new. They worked efficiently without cutting corners and were very respectful of the property.",
+    avatar: "O",
   },
   {
-    name: "Jennifer Adams",
-    location: "Kirkland, WA",
-    rating: 5,
-    text: "The booking process was so easy, and the cleaning crew was fantastic. They even cleaned the window tracks without being asked. Now I can finally enjoy my view again!",
-    image: "JA",
-  },
-  {
-    name: "Robert Thompson",
-    location: "Redmond, WA",
-    rating: 5,
-    text: "Our commercial building looks brand new thanks to Crystal Clear. They work around our business hours and never disrupt our operations. A+ service!",
-    image: "RT",
+    name: "Oluwatobi Gabriel",
+    rating: 4.5,
+    review: "Absolutely outstanding window cleaning service. The team was punctual, professional, and paid great attention to detail. Every window was left spotless, streak-free, and looking brand new. They worked efficiently without cutting corners and were very respectful of the property.",
+    avatar: "O",
   },
 ];
 
 export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
-    <section id="reviews" className="section-padding bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/10">
+    <section id="reviews" className="section-padding bg-muted/50">
       <div className="container mx-auto container-padding">
+        {/* Hero Image Area */}
+        <div className="aspect-[21/9] rounded-2xl bg-muted mb-16 overflow-hidden">
+          <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20" />
+        </div>
+
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent font-medium text-sm mb-4">
-            Customer Love
-          </span>
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-            What Our Clients Say
+            Testimonials
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-6 rounded-full" />
           <p className="text-muted-foreground text-lg">
-            Don't just take our word for it. Here's what our happy customers have to say.
+            Here what our customers says about us
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Quote Icon */}
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
-              <Quote className="h-6 w-6 text-primary-foreground" />
-            </div>
-
-            {/* Testimonial Card */}
-            <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12 pt-12 border border-border/50">
-              <div className="text-center">
-                {/* Stars */}
-                <div className="flex justify-center gap-1 mb-6">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-highlight fill-highlight" />
-                  ))}
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-card border-border/50">
+              <CardContent className="p-6">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-heading font-semibold text-foreground">
+                    {testimonial.name}
+                  </h3>
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-4 w-4 ${
+                          i < Math.floor(testimonial.rating) 
+                            ? "text-highlight fill-highlight" 
+                            : "text-muted"
+                        }`} 
+                      />
+                    ))}
+                    <span className="text-sm text-muted-foreground ml-1">
+                      {testimonial.rating.toFixed(1)}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Quote */}
-                <p className="text-lg md:text-xl text-foreground leading-relaxed mb-8">
-                  "{testimonials[currentIndex].text}"
+                {/* Review */}
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-5">
+                  {testimonial.review}
                 </p>
 
-                {/* Author */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg mb-3">
-                    {testimonials[currentIndex].image}
-                  </div>
-                  <h4 className="font-heading font-semibold text-foreground">
-                    {testimonials[currentIndex].name}
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonials[currentIndex].location}
-                  </p>
-                </div>
-              </div>
-            </div>
+                <Button variant="link" className="p-0 text-primary text-sm">
+                  Read More
+                </Button>
 
-            {/* Navigation */}
-            <div className="flex justify-center gap-4 mt-8">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevTestimonial}
-                className="rounded-full"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              
-              {/* Dots */}
-              <div className="flex items-center gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={cn(
-                      "w-2.5 h-2.5 rounded-full transition-all",
-                      index === currentIndex
-                        ? "bg-primary w-8"
-                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                    )}
-                  />
-                ))}
-              </div>
-              
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={nextTestimonial}
-                className="rounded-full"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+                {/* Avatar */}
+                <div className="mt-4">
+                  <div className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center font-semibold">
+                    {testimonial.avatar}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

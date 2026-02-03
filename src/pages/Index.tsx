@@ -1,12 +1,11 @@
 import { Navbar } from "@/components/landing/Navbar";
 import { Hero } from "@/components/landing/Hero";
-import { Services } from "@/components/landing/Services";
+import { FeaturedServices } from "@/components/landing/FeaturedServices";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { Pricing } from "@/components/landing/Pricing";
-import { Testimonials } from "@/components/landing/Testimonials";
-import { BookingForm } from "@/components/landing/BookingForm";
-import { FAQ } from "@/components/landing/FAQ";
 import { Contact } from "@/components/landing/Contact";
+import { Testimonials } from "@/components/landing/Testimonials";
+import { AboutUs } from "@/components/landing/AboutUs";
+import { BookingForm } from "@/components/landing/BookingForm";
 import { Footer } from "@/components/landing/Footer";
 
 const Index = () => {
@@ -14,13 +13,12 @@ const Index = () => {
     <div className="min-h-screen scroll-smooth">
       <Navbar />
       <Hero />
-      <Services />
+      <FeaturedServices />
       <HowItWorks />
-      <Pricing />
-      <Testimonials />
-      <BookingForm />
-      <FAQ />
       <Contact />
+      <Testimonials />
+      <AboutUs />
+      <BookingForm />
       <Footer />
     </div>
   );
