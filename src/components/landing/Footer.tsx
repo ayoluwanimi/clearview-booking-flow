@@ -76,7 +76,7 @@ export function Footer() {
               Office Address
             </h3>
             <p className="text-muted-foreground mb-4">
-              Malpas Newport United Kingdom
+              Mellon St, Newport NP20 1EP
             </p>
             <p className="font-semibold text-foreground mb-1">Email Us:</p>
             <a 
