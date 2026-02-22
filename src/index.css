@@ -6,108 +6,108 @@
 
 @layer base {
   :root {
-    /* GEB Clean White & Orange Brand */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Crystal Clear Window Cleaning Brand Colors */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 215 25% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 215 25% 20%;
 
-    /* Orange - Primary brand color */
-    --primary: 18 90% 48%;
+    /* Deep Ocean Blue - Primary brand color */
+    --primary: 210 55% 25%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Gray - Secondary */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    /* Sky Blue - Secondary */
+    --secondary: 197 71% 73%;
+    --secondary-foreground: 210 55% 20%;
 
-    /* Orange accent */
-    --accent: 18 90% 48%;
+    /* Crystal Aqua - Accent */
+    --accent: 181 100% 41%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Orange highlight */
-    --highlight: 18 90% 48%;
-    --highlight-foreground: 0 0% 100%;
+    /* Sparkling Gold - Highlight/CTA */
+    --highlight: 51 100% 50%;
+    --highlight-foreground: 215 25% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 18 90% 48%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 181 100% 41%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(18 90% 48%) 0%, hsl(25 95% 55%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(18 90% 48%) 0%, hsl(25 95% 55%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(18 90% 48%) 0%, hsl(25 95% 55%) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 55% 20% / 0.95) 0%, hsl(210 55% 30% / 0.85) 50%, hsl(181 100% 35% / 0.75) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(210 55% 25%) 0%, hsl(197 71% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(181 100% 41%) 0%, hsl(197 71% 73%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%) 0%, hsl(45 100% 55%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.06);
-    --shadow-md: 0 8px 24px -4px hsl(0 0% 0% / 0.08);
-    --shadow-lg: 0 16px 48px -8px hsl(0 0% 0% / 0.12);
-    --shadow-glow: 0 0 40px -10px hsl(18 90% 48% / 0.3);
-    --shadow-gold: 0 8px 32px -4px hsl(18 90% 48% / 0.25);
+    --shadow-sm: 0 2px 8px -2px hsl(210 55% 25% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(210 55% 25% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(210 55% 25% / 0.16);
+    --shadow-glow: 0 0 40px -10px hsl(181 100% 41% / 0.4);
+    --shadow-gold: 0 8px 32px -4px hsl(51 100% 50% / 0.35);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 18 90% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 18 90% 48%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 215 25% 8%;
+    --foreground: 210 20% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 18 90% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 197 71% 65%;
+    --primary-foreground: 215 25% 10%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 210 55% 35%;
+    --secondary-foreground: 210 20% 95%;
 
-    --accent: 18 90% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 181 100% 45%;
+    --accent-foreground: 215 25% 10%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 60%;
 
-    --highlight: 18 90% 55%;
-    --highlight-foreground: 0 0% 100%;
+    --highlight: 51 100% 50%;
+    --highlight-foreground: 215 25% 10%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 18 90% 55%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 181 100% 45%;
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 18 90% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 18 90% 55%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 

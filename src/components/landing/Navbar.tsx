@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { name: "About", href: "#about" },
+  { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
-  { name: "Contacts", href: "#contact" },
+  { name: "Contact Us", href: "#contact" },
+  { name: "About Us", href: "#about" },
 ];
 
 export function Navbar() {
@@ -35,56 +36,57 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-background py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+          : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto container-padding">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-12">
-            {/* Nav Links - Desktop */}
-            <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <button
-                  key={link.name}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-foreground font-medium hover:text-primary transition-colors"
-                >
-                  {link.name}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Center Logo */}
           <Link
             to="/"
-            className="flex items-center"
+            className="flex items-center gap-2 group"
             onClick={() => scrollToSection("#home")}
           >
-            <span className="font-heading font-bold text-2xl italic text-primary">
-              GEB
+            <span className={cn(
+              "font-heading font-bold text-xl transition-colors",
+              isScrolled ? "text-primary" : "text-white"
+            )}>
+              GEB Company
             </span>
           </Link>
 
-          {/* Right Side */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="https://wa.me/447577306168?text=Hi.%20I%20want%20to%20place%20an%20order"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-            >
-              <MessageCircle className="h-5 w-5" />
-            </a>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.name}
+                onClick={() => scrollToSection(link.href)}
+                className={cn(
+                  "font-medium transition-colors relative group",
+                  isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white/90 hover:text-white"
+                )}
+              >
+                {link.name}
+                <span className={cn(
+                  "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
+                  isScrolled ? "bg-primary" : "bg-white"
+                )} />
+              </button>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center gap-3">
             <Button
-              variant="outline"
+              variant={isScrolled ? "hero" : "hero"}
               size="sm"
-              onClick={() => scrollToSection("#contact")}
-              className="border-foreground text-foreground hover:bg-foreground hover:text-background rounded-sm"
+              onClick={() => scrollToSection("#booking")}
+              className={!isScrolled ? "animate-none" : ""}
             >
-              Contact
+              Get a Free Quote
             </Button>
           </div>
 
@@ -94,41 +96,41 @@ export function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-foreground" />
+              <X className={cn("h-6 w-6", isScrolled ? "text-foreground" : "text-white")} />
             ) : (
-              <Menu className="h-6 w-6 text-foreground" />
+              <Menu className={cn("h-6 w-6", isScrolled ? "text-foreground" : "text-white")} />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 p-4 rounded-xl bg-background shadow-lg animate-fade-in">
+          <div className={cn(
+            "lg:hidden mt-4 p-4 rounded-xl animate-fade-in",
+            isScrolled ? "bg-white shadow-lg" : "glass"
+          )}>
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-left py-2 px-3 rounded-lg font-medium text-foreground hover:bg-muted transition-colors"
+                  className={cn(
+                    "text-left py-2 px-3 rounded-lg font-medium transition-colors",
+                    isScrolled
+                      ? "text-foreground hover:bg-muted"
+                      : "text-white hover:bg-white/10"
+                  )}
                 >
                   {link.name}
                 </button>
               ))}
-              <div className="flex flex-col gap-2 pt-2 border-t border-border">
-                <a
-                  href="https://wa.me/447577306168?text=Hi.%20I%20want%20to%20place%20an%20order"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-left py-2 px-3 rounded-lg font-medium text-foreground hover:bg-muted transition-colors"
-                >
-                  WhatsApp
-                </a>
+              <div className="flex flex-col gap-2 pt-2 border-t border-white/20">
                 <Button
-                  variant="outline"
-                  onClick={() => scrollToSection("#contact")}
-                  className="w-full border-foreground text-foreground"
+                  variant="hero"
+                  onClick={() => scrollToSection("#booking")}
+                  className="w-full animate-none"
                 >
-                  Contact
+                  Get a Free Quote
                 </Button>
               </div>
             </div>
