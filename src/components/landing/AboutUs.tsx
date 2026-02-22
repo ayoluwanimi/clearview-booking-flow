@@ -1,44 +1,27 @@
-import { Button } from "@/components/ui/button";
-import { Droplets } from "lucide-react";
-
 export function AboutUs() {
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="about" className="section-padding bg-background">
       <div className="container mx-auto container-padding">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-4xl mx-auto">
+          {/* Tagline */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-2">
-            About us
+            Honest, Reliable.
           </h2>
-          <p className="text-muted-foreground">
-            Here what our customers says about us
-          </p>
-        </div>
+          <h3 className="text-2xl sm:text-3xl font-heading font-semibold text-primary mb-8">
+            Local and Friendly
+          </h3>
 
-        {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-6">
-            <p className="text-muted-foreground leading-relaxed">
-              At GEB Company, we don't just clean, we create the clean, calm, and cared-for space you deserve. As your local, trusted partner since 2009, we combine vetted professionals with a meticulous approach for consistently spotless results. We tailor our service to your unique life and priorities, ensuring a sanctuary at home and a polished, professional business. Let us handle the cleaning, so you can focus on what truly matters.
+          {/* Description */}
+          <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+            <p>
+              Our company specializes in a wide range of cleaning services aimed at caring for your home, office, and all surrounding spaces.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              For us, cleaning is an act of care. We don't just see dirt we see the potential for peace, comfort, and pride in your environment. Every detail we handle is part of creating a sanctuary for your family or a professional catalyst for your business.
+            <p>
+              We offer professional window washing, roof cleaning, driveway cleaning, garden maintenance, and much more to ensure the impeccable appearance of your home or business. Our team of experts is ready to take care of all aspects of cleaning and maintenance of your exterior spaces so you can enjoy their cleanliness and orderliness without spending your precious time on it.
             </p>
-            <Button variant="link" className="p-0 text-primary font-semibold">
-              Read More
-            </Button>
-          </div>
-
-          {/* Image Placeholder */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-muted overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Droplets className="h-12 w-12 text-primary" />
-                </div>
-              </div>
-            </div>
+            <p>
+              Trust us with the care of your outdoor space, and we will ensure its shine and well-maintained appearance throughout the year. Contact us today to find out how we can make your home or business even more attractive and well-kept!
+            </p>
           </div>
         </div>
       </div>
