@@ -6,57 +6,57 @@
 
 @layer base {
   :root {
-    /* Crystal Clear Window Cleaning Brand Colors */
-    --background: 210 20% 98%;
-    --foreground: 215 25% 20%;
+    /* GEB Company Brand Colors - Orange/Black/White */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 20%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 20%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Deep Ocean Blue - Primary brand color */
-    --primary: 210 55% 25%;
+    /* Vibrant Orange - Primary brand color */
+    --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Sky Blue - Secondary */
-    --secondary: 197 71% 73%;
-    --secondary-foreground: 210 55% 20%;
+    /* Warm Orange - Secondary */
+    --secondary: 30 90% 95%;
+    --secondary-foreground: 24 100% 40%;
 
-    /* Crystal Aqua - Accent */
-    --accent: 181 100% 41%;
+    /* Deep Orange - Accent */
+    --accent: 24 100% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 30 10% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Sparkling Gold - Highlight/CTA */
-    --highlight: 51 100% 50%;
-    --highlight-foreground: 215 25% 15%;
+    /* Orange Highlight/CTA */
+    --highlight: 24 100% 50%;
+    --highlight-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 181 100% 41%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 24 100% 50%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 55% 20% / 0.95) 0%, hsl(210 55% 30% / 0.85) 50%, hsl(181 100% 35% / 0.75) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(210 55% 25%) 0%, hsl(197 71% 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(181 100% 41%) 0%, hsl(197 71% 73%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%) 0%, hsl(45 100% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8% / 0.95) 0%, hsl(0 0% 15% / 0.9) 50%, hsl(24 100% 30% / 0.85) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 50%) 0%, hsl(30 100% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(24 100% 45%) 0%, hsl(30 90% 55%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(24 100% 50%) 0%, hsl(35 100% 55%) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px -2px hsl(210 55% 25% / 0.08);
-    --shadow-md: 0 8px 24px -4px hsl(210 55% 25% / 0.12);
-    --shadow-lg: 0 16px 48px -8px hsl(210 55% 25% / 0.16);
-    --shadow-glow: 0 0 40px -10px hsl(181 100% 41% / 0.4);
-    --shadow-gold: 0 8px 32px -4px hsl(51 100% 50% / 0.35);
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(0 0% 0% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(0 0% 0% / 0.16);
+    --shadow-glow: 0 0 40px -10px hsl(24 100% 50% / 0.4);
+    --shadow-gold: 0 8px 32px -4px hsl(24 100% 50% / 0.35);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -69,36 +69,36 @@
   }
 
   .dark {
-    --background: 215 25% 8%;
-    --foreground: 210 20% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 197 71% 65%;
-    --primary-foreground: 215 25% 10%;
+    --primary: 24 100% 55%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 210 55% 35%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 24 50% 20%;
+    --secondary-foreground: 0 0% 95%;
 
-    --accent: 181 100% 45%;
-    --accent-foreground: 215 25% 10%;
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 5%;
 
-    --muted: 215 20% 18%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --highlight: 51 100% 50%;
-    --highlight-foreground: 215 25% 10%;
+    --highlight: 24 100% 55%;
+    --highlight-foreground: 0 0% 5%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 181 100% 45%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 24 100% 55%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

@@ -49,10 +49,10 @@ export function Navbar() {
             onClick={() => scrollToSection("#home")}
           >
             <span className={cn(
-              "font-heading font-bold text-xl transition-colors",
-              isScrolled ? "text-primary" : "text-white"
+              "font-heading font-bold text-2xl italic transition-colors",
+              isScrolled ? "text-primary" : "text-primary"
             )}>
-              GEB Company
+              GEB
             </span>
           </Link>
 

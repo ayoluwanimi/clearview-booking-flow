@@ -10,9 +10,10 @@ export function AboutUs() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-2">
             About us
           </h2>
-          <p className="text-muted-foreground">
-            Here what our customers says about us
-          </p>
+          <span className="text-sm font-medium text-primary uppercase tracking-wider mb-2 inline-block">Honest, Reliable. Local and Friendly</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-2">
+            About Us
+          </h2>
         </div>
 
         {/* Content */}
@@ -20,10 +21,13 @@ export function AboutUs() {
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              At GEB Company, we don't just clean, we create the clean, calm, and cared-for space you deserve. As your local, trusted partner since 2009, we combine vetted professionals with a meticulous approach for consistently spotless results. We tailor our service to your unique life and priorities, ensuring a sanctuary at home and a polished, professional business. Let us handle the cleaning, so you can focus on what truly matters.
+              Our company specializes in a wide range of cleaning services aimed at caring for your home, office, and all surrounding spaces.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              For us, cleaning is an act of care. We don't just see dirt we see the potential for peace, comfort, and pride in your environment. Every detail we handle is part of creating a sanctuary for your family or a professional catalyst for your business.
+              We offer professional window washing, roof cleaning, driveway cleaning, garden maintenance, and much more to ensure the impeccable appearance of your home or business. Our team of experts is ready to take care of all aspects of cleaning and maintenance of your exterior spaces so you can enjoy their cleanliness and orderliness without spending your precious time on it.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Trust us with the care of your outdoor space, and we will ensure its shine and well-maintained appearance throughout the year. Contact us today to find out how we can make your home or business even more attractive and well-kept!
             </p>
             <Button variant="link" className="p-0 text-primary font-semibold">
               Read More

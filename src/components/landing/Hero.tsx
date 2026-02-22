@@ -56,11 +56,13 @@ export function Hero() {
         <div className="max-w-4xl mx-auto text-center stagger-children">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-6">
-            Complete Cleaning Solutions for Homes
-            <span className="block mt-2">
-              & Businesses in <span className="text-highlight">United Kingdom</span>
-            </span>
+            WINDOWS
+            <span className="block mt-2">CLEANER</span>
           </h1>
+
+          <p className="text-lg sm:text-xl text-white/70 max-w-md mx-auto mb-4">
+            Mob: 0 7577 306 168
+          </p>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">

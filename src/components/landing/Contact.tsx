@@ -48,8 +48,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Phone</p>
-                  <a href="tel:07573788878" className="text-muted-foreground hover:text-primary transition-colors">
-                    07573788878
+                  <a href="tel:07577306168" className="text-muted-foreground hover:text-primary transition-colors">
+                    07577306168
                   </a>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Location</p>
-                  <p className="text-muted-foreground">Mellon, UK</p>
+                  <p className="text-muted-foreground">Mellon St, Newport NP20 1EP</p>
                 </div>
               </div>
 
