@@ -1,91 +1,16 @@
-import { Link } from "react-router-dom";
-
-const usefulLinks = [
-  { name: "Home cleaning", href: "#services" },
-  { name: "Company History", href: "#about" },
-  { name: "Office Cleaning", href: "#services" },
-  { name: "Window cleaning", href: "#services" },
-];
-
-const companyLinks = [
-  { name: "About Us", href: "#about" },
-  { name: "Our Services", href: "#services" },
-  { name: "Contact Us", href: "#contact" },
-];
-
 export function Footer() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="container mx-auto container-padding py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <Link to="/" className="font-heading font-bold text-xl text-foreground">
-              GEB Company
-            </Link>
-          </div>
-
-          {/* Useful Links */}
-          <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
-              Useful Links
-            </h3>
-            <ul className="space-y-2">
-              {usefulLinks.map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
-              Company
-            </h3>
-            <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Office Address */}
-          <div>
-            <h3 className="font-heading font-semibold text-foreground mb-4">
-              Office Address
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              Malpas Newport United Kingdom
-            </p>
-            <p className="font-semibold text-foreground mb-1">Email Us:</p>
-            <a 
-              href="mailto:Gebcompany@gmail.com" 
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Gebcompany@gmail.com
-            </a>
-          </div>
+    <footer className="bg-background border-t border-border py-12">
+      <div className="container mx-auto container-padding">
+        <div className="flex flex-col items-center text-center gap-4">
+          <p className="font-heading font-bold text-lg text-foreground">Eugen</p>
+          <p className="text-muted-foreground">Worker</p>
+          <a
+            href="tel:07577306168"
+            className="text-primary hover:text-primary/80 transition-colors font-medium"
+          >
+            07577306168
+          </a>
         </div>
       </div>
     </footer>

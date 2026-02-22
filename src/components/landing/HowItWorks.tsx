@@ -1,71 +1,62 @@
-import { FileText, Clock, Sparkles, ThumbsUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, MapPin, Award } from "lucide-react";
 
-const steps = [
+const advantages = [
   {
-    icon: FileText,
-    number: 1,
-    title: "Request a free quote",
-    color: "from-primary to-primary/80",
+    icon: MapPin,
+    text: "Always close to you. Local and friendly.",
   },
   {
-    icon: Clock,
-    number: 2,
-    title: "Choose a convenient time",
-    color: "from-accent to-accent/80",
+    icon: Award,
+    text: "Decades of Skill with Outstanding Client Feedback.",
   },
   {
     icon: Sparkles,
-    number: 3,
-    title: "We clean your windows",
-    color: "from-secondary to-secondary/80",
-  },
-  {
-    icon: ThumbsUp,
-    number: 4,
-    title: "Enjoy spotless results",
-    color: "from-highlight to-amber-400",
+    text: "I consistently deliver thorough work, treating each task as if it were for my own home.",
   },
 ];
 
 export function HowItWorks() {
+  const scrollToContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="how-it-works" className="section-padding bg-muted/30">
+    <section className="section-padding bg-muted/30">
       <div className="container mx-auto container-padding">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
-            How it Works
+        {/* CTA Section */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+            Let Your Windows Sparkle with Brilliance!
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Our process is simple, efficient, and designed to make your property look its best 
-            with minimal effort on your part.
+          <p className="text-muted-foreground text-lg mb-8">
+            Just get in touch with me, and you'll see why you won't need any other service. We don't just clean windows, we create sparkling experiences.
           </p>
+          <Button
+            onClick={scrollToContact}
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm px-8 py-3"
+          >
+            Contact
+          </Button>
         </div>
 
-        {/* Steps */}
-        <div className="relative">
-          {/* Connection Line - Desktop */}
-          <div className="hidden lg:block absolute top-16 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-primary via-accent to-highlight" />
-          
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
-            {steps.map((step) => (
-              <div 
-                key={step.title}
-                className="relative flex flex-col items-center text-center group"
+        {/* Advantages */}
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-8 text-center">
+            My Advantages
+          </h3>
+          <div className="space-y-6">
+            {advantages.map((advantage, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 p-4 rounded-xl bg-background border border-border"
               >
-                {/* Icon Container */}
-                <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-                  <step.icon className="h-10 w-10 text-white" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <advantage.icon className="h-5 w-5 text-primary" />
                 </div>
-                
-                {/* Step Label */}
-                <p className="text-sm text-muted-foreground mb-2">Step {step.number}</p>
-                
-                {/* Content */}
-                <h3 className="font-heading font-semibold text-lg text-foreground">
-                  {step.title}
-                </h3>
+                <p className="text-foreground text-lg leading-relaxed">
+                  {advantage.text}
+                </p>
               </div>
             ))}
           </div>
